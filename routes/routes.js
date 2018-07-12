@@ -1,5 +1,6 @@
 'use strict'
 var csv = require('../common/services/querycsv')
+const logger = require('../common/utils/logger')
 var appRouter = function (app) {
    
      
@@ -79,7 +80,7 @@ var appRouter = function (app) {
     //all errors are handled below
 
 app.get('*', function(req, res) {
-    res. res.send({ message: 'An error has occurred.Please try again' });
+    res.send({ message: 'An error has occurred.Please try again' });
   });
 }
 module.exports = appRouter;
