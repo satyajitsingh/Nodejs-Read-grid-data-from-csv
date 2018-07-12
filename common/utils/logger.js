@@ -1,9 +1,7 @@
 const winston = require('winston')
 
-const config = require('../config/index')
-
 const logger = winston.createLogger({
-  level: config.LOG_LEVEL,
+  level: 'error',
   format: winston.format.json(),
   transports: [
     new winston.transports.File({ filename: '/var/log/nodejs/app.log'})
