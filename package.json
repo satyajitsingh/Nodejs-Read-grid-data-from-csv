@@ -1,0 +1,26 @@
+{
+  "name": "server-app",
+  "version": "1.0.0",
+  "description": "server app to read csv data and return JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Satyajit Singh <satyajit_singh@yahoo.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-apidoc": "^0.2.8",
+    "nodemon": "^1.18.1"
+  },
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "body-parser": "^1.18.3",
+    "csv-query": "0.0.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "pino": "^4.17.3",
+    "winston": "^3.0.0"
+  }
+}

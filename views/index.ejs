@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test WpdGrid</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/nearest" method="post">
+          <table>
+            <tr>
+              <td><label for="lat">Latitude</label></td>
+              <td><input name="lat" type="text" class="ghost-input" placeholder="Enter Latitude" required></td>
+            </tr>
+            <tr>
+              <td> <label for="lon">Longitude</label></td>
+              <td><input name="lon" type="text" class="ghost-input" placeholder="Enter Longitude" required></td>
+             </tr>
+        </table>
+          
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+        <br>
+        <% if(data !== null){ %>
+          <table>
+            <th>WPD Grid Data </th>
+            <tr>
+              <td>Network Reference ID:</td><td><%= data["Network Reference ID"] %></td>
+            </tr>
+            <tr>
+              <td>Substation Number:</td><td><%= data["Substation Number"] %></td>
+            </tr>
+            <tr>
+              <td>Substation Name</td><td><%= data["Substation Name"] %></td>
+            </tr>
+            <tr>
+              <td>Asset Type:</td><td><%= data["Asset Type"] %></td>
+            </tr>
+            <tr>
+              <td>Latitude:</td><td><%= data["Latitude"] %></td>
+            </tr>
+            <tr>
+              <td>Network Reference ID:</td><td><%= data["Network Reference ID"] %></td>
+            </tr>
+          </table>
+        <% }else { %>
+          <table>
+            <tr>
+              <td>No Data Found</td>
+            </tr>
+          </table>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
