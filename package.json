@@ -4,7 +4,7 @@
   "description": "server app to read csv data and return JSON",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --reporter spec",
     "start": "nodemon server.js"
   },
   "author": "Satyajit Singh <satyajit_singh@yahoo.com>",
@@ -12,11 +12,13 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-apidoc": "^0.2.8",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.1"
   },
   "dependencies": {
     "apidoc": "^0.17.6",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
     "csv-query": "0.0.4",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
